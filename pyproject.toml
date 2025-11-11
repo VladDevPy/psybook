@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "psybook"
+version = "0.1.0"
+description = "Booking service for psychology consultations (FastAPI, src-layout)"
+authors = ["You <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "psybook", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.0"
+uvicorn = {extras = ["standard"], version = "^0.30.0"}
+pydantic = "^2.9.0"
+python-dateutil = "^2.9.0.post0"
+email-validator = "^2.1.0"
+tzdata = "^2025.2"
+jinja2 = "^3.1.6"
+sqlalchemy = "^2.0.44"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.0"
+httpx = "^0.27.0"
+ruff = "^0.6.9"
+pre-commit = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E","F","I","UP","B","SIM","PL"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

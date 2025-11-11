@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>PsyBook — запись</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>🧠 PsyBook — запись на консультацию</h1>
+
+  <h2>1) Выберите дату</h2>
+  <input type="date" id="day"><button onclick="loadSlots()">Показать слоты</button>
+  <div id="slots"></div>
+
+  <h2>2) Забронировать</h2>
+  <input id="name" placeholder="Имя"><br>
+  <input id="email" placeholder="Email"><br>
+  <input id="slotId" placeholder="slot_id"><br>
+  <button onclick="book()">Забронировать</button>
+  <pre id="bookResult"></pre>
+
+  <h2>3) Отменить</h2>
+  <input id="bookingId" placeholder="booking_id"><br>
+  <input id="emailCancel" placeholder="email"><br>
+  <button onclick="cancelBooking()">Отменить</button>
+  <pre id="cancelResult"></pre>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
