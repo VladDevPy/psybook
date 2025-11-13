@@ -31,7 +31,7 @@ class MemoryStore:
 
     def seed_slots_for_day(self, day: date) -> None:
         """
-        Сгенерируем слоты по 60 минут с 10:00 до 18:00 (можешь поменять под себя).
+        Сгенерируем слоты по 60 минут с 10:00 до 18:00.
         """
         start_local = datetime(day.year, day.month, day.day, 10, 0, tzinfo=AMS)
         for i in range(8):  # 8 часов = 8 слотов
